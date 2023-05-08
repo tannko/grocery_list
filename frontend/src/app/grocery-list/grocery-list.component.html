@@ -8,9 +8,7 @@
     </mat-card-header>
     <mat-card-content>
         <div *ngIf="showAddItem">
-            <input mat-input type="text" [(ngModel)]="newItemName"/>
-            <button mat-button (click)="saveNewItem(newItemName)">Save</button>
-            <button mat-button (click)="close()">Close</button>
+            <add-list-item (save)="saveNewItem($event)" (close)="close()"></add-list-item>
         </div>
         <mat-list>
             <ng-container *ngFor="let item of groceryList.items">

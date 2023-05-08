@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { EditListItemComponent } from './edit-list-item/edit-list-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddListItemComponent } from './add-list-item/add-list-item.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     AllGroceryListsComponent,
     CreateNewListComponent,
     EditListItemComponent,
+    AddListItemComponent,
   ],
   imports: [
     BrowserModule,

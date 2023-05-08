@@ -20,7 +20,6 @@ export class GroceryListComponent implements OnInit {
     public dialog: MatDialog
   ) {}
   groceryList!: GroceryList;
-  newItemName: string = '';
 
   ngOnInit() {
     this.route.paramMap
@@ -49,7 +48,6 @@ export class GroceryListComponent implements OnInit {
   }
 
   addItem() {
-    // show input to edit item
     this.showAddItem = true;
   }
 
@@ -68,7 +66,6 @@ export class GroceryListComponent implements OnInit {
         console.log(list);
         this.groceryList = list;
       });
-    this.newItemName = '';
   }
 
   close() {
