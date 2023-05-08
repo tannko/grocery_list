@@ -1,0 +1,15 @@
+<button mat-fab (click)="openAddListDialog()">+</button>
+<!-- <div *ngIf="showAddListInput">
+    <input type="text" />
+    <button (click)="saveList()">Save</button>
+    <button (click)="cancelAdd()">Cancel</button>
+</div> -->
+<mat-card>
+    <mat-card-header>My Lists</mat-card-header>
+    <mat-card-content>
+        <mat-action-list>
+            <button [routerLink]="['/list', list.id]" mat-list-item
+                *ngFor="let list of groceryLists">{{list.name}}</button>
+        </mat-action-list>
+    </mat-card-content>
+</mat-card>

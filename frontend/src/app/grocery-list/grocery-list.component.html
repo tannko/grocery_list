@@ -1,0 +1,31 @@
+<mat-card *ngIf="groceryList">
+    <mat-card-header>
+        <div class="list-header">
+            <button mat-icon-button (click)="goToAllLists()"><mat-icon>arrow_back</mat-icon></button>
+            <span>{{groceryList.name}}</span>
+            <button mat-mini-fab (click)="addItem()"><mat-icon>add</mat-icon></button>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngIf="showAddItem">
+            <input mat-input type="text" [(ngModel)]="newItemName"/>
+            <button mat-button (click)="saveNewItem(newItemName)">Save</button>
+            <button mat-button (click)="close()">Close</button>
+        </div>
+        <mat-list>
+            <ng-container *ngFor="let item of groceryList.items">
+                <div class="list-item-row">
+                    <mat-list-item
+                    (click)="switchPurchasedStatus(item)"
+                    [ngClass]="{'strikethrough': item.purchased}">
+                        {{item.name}}
+                </mat-list-item>
+                <button mat-icon-button (click)="editItem(item)"><mat-icon>edit</mat-icon></button>
+                        <button mat-mini-fab (click)="deleteItem(item.id)"><mat-icon>delete</mat-icon></button>
+                </div>
+        </ng-container>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
+
+

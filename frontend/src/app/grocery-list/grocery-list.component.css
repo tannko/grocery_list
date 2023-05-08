@@ -1,0 +1,17 @@
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.list-item-row {
+    display: flex;
+}
+
+span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.list-header {
+    display: flex;
+    vertical-align: baseline;
+}

@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>New List</h2>
+<mat-dialog-content>
+    <input [(ngModel)]="listName" matInput placeholder="List Name"/>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="listName">Save</button>
+</mat-dialog-actions>
