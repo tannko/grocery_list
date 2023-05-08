@@ -3,9 +3,9 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { GroceryListService } from './grocery-list.service';
 import { MatDialog } from '@angular/material/dialog';
-import { EditListItemComponent } from '../edit-list-item/edit-list-item.component';
 import { Item } from './list-item';
 import { GroceryList } from './grocery-list';
+import { EditListItemComponent } from '../edit-list-item/edit-list-item.component';
 
 @Component({
   selector: 'app-grocery-list',

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AllGroceryListsComponent } from './all-grocery-lists/all-grocery-lists.component';
-import { GroceryListComponent } from './grocery-list/grocery-list.component';
-import { CreateNewListComponent } from './create-new-list/create-new-list.component';
+import { GroceryListComponent } from './grocery-lists/grocery-list/grocery-list.component';
+import { AllGroceryListsComponent } from './grocery-lists/all-grocery-lists/all-grocery-lists.component';
+import { CreateNewListComponent } from './grocery-lists/create-new-list/create-new-list.component';
 
 const routes: Routes = [
   {

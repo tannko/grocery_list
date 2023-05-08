@@ -12,8 +12,10 @@ export class AddListItemComponent {
   itemName: string = '';
 
   saveNewItem() {
-    this.save.emit(this.itemName);
-    this.itemName = '';
+    if (this.itemName && this.itemName.trim().length > 0) {
+      this.save.emit(this.itemName);
+      this.itemName = '';
+    }
   }
 
   closeDialog() {
