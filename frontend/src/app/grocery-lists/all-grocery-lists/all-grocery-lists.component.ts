@@ -4,7 +4,7 @@ import { CreateNewListComponent } from '../create-new-list/create-new-list.compo
 import { Router } from '@angular/router';
 import { GroceryList } from '../grocery-list/grocery-list';
 import { Observable, map } from 'rxjs';
-import { GroceryListService } from '../grocery-list/grocery-list.service';
+import { GroceryListService } from '../grocery-list.service';
 
 @Component({
   selector: 'all-grocery-lists',

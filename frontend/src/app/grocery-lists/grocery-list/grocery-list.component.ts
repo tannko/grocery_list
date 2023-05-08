@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { GroceryListService } from './grocery-list.service';
+import { GroceryListService } from '../grocery-list.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Item } from './list-item';
 import { GroceryList } from './grocery-list';

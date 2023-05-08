@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { of, Observable } from 'rxjs';
-import { GroceryList } from './grocery-list';
+import { GroceryList } from './grocery-list/grocery-list';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Item } from './list-item';
+import { Item } from './grocery-list/list-item';
 
 @Injectable({
   providedIn: 'root',
@@ -11,15 +11,7 @@ export class GroceryListService {
   constructor(private http: HttpClient) {}
   groceryListsUrl: string = 'http://localhost:3000/grocery-lists';
 
-  getListItems(id: number | string) {
-    return []; //of(listItems);
-  }
-
   getGroceryList(id: number | string) {
-    // const groceryList = allGroceryLists.find(
-    //   (groceryList: GroceryList) => groceryList.id == id
-    // );
-    // return of(groceryList);
     return this.http.get<GroceryList>(this.groceryListsUrl + '/' + id);
   }
 
