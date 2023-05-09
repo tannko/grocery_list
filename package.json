@@ -4,5 +4,9 @@
     "scripts": {
         "heroku-prebuild": "(cd ./backend && npm install && npm run build && cd ../frontend && npm install && npm run build:frontend)",
         "start": "(cd ./backend && npm run start)"
+    },
+    "dependencies": {    
+         "@angular/cli": "^15.0.0",     
+         "@nestjs/cli": "^9.4.2"
     }
 }
