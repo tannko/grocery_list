@@ -9,7 +9,8 @@ import { Item } from './grocery-list/list-item';
 })
 export class GroceryListService {
   constructor(private http: HttpClient) {}
-  groceryListsUrl: string = 'http://localhost:3000/grocery-lists';
+  //groceryListsUrl: string = 'http://localhost:3000/grocery-lists';
+  groceryListsUrl: string = '/grocery-lists';
 
   getGroceryList(id: number | string) {
     return this.http.get<GroceryList>(this.groceryListsUrl + '/' + id);
