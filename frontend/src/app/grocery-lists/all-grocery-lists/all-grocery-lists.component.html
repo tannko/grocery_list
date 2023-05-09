@@ -1,6 +1,8 @@
-<button mat-fab (click)="openAddListDialog()">+</button>
 <mat-card>
-    <mat-card-header>My Lists</mat-card-header>
+    <mat-card-header>
+        <span>My Lists</span>
+        <button mat-mini-fab (click)="openAddListDialog()"><mat-icon>add</mat-icon></button>
+    </mat-card-header>
     <mat-card-content>
         <mat-action-list>
             <button [routerLink]="['/list', list.id]" mat-list-item

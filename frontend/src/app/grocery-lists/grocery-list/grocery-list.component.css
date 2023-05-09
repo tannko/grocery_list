@@ -9,9 +9,24 @@
 span {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    width: 40%;
 }
 
-.list-header {
+mat-card-header {
     display: flex;
-    vertical-align: baseline;
+    /*justify-content: space-between;*/
+    flex-wrap: wrap;
+}
+
+.header-button-first {
+    display: flex;
+    justify-content: flex-start;
+    width: 30%;
+}
+
+.header-button-last {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
 }

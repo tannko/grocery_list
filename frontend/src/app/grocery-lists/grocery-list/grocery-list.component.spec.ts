@@ -122,7 +122,7 @@ describe('GroceryListComponent', () => {
 
   it('should contain grocery list name in a list header', () => {
     const html = fixture.nativeElement;
-    const titleSpan = html.querySelector('.list-header span');
+    const titleSpan = html.querySelector('mat-card-header span');
     expect(titleSpan.textContent).toBe('test');
   });
 
@@ -158,8 +158,8 @@ describe('GroceryListComponent', () => {
 
   it('should show add item input when + button clicked', () => {
     const html = fixture.nativeElement;
-    const addListButton = html.querySelector('.list-header span ~ button');
-    addListButton.click();
+    const addItemButton = html.querySelector('.header-button-last button');
+    addItemButton.click();
     fixture.detectChanges();
     expect(component.showAddItem).toBe(true);
     const addItemComponent =
@@ -171,8 +171,8 @@ describe('GroceryListComponent', () => {
     const html = fixture.nativeElement;
     let items = html.querySelectorAll('mat-list-item');
     let itemsCount = items.length;
-    const addListButton = html.querySelector('.list-header span ~ button');
-    addListButton.click();
+    const addItemButton = html.querySelector('.header-button-last button');
+    addItemButton.click();
     fixture.detectChanges();
     const addItem = fixture.nativeElement.querySelector('input');
     addItem.value = 'new item';
@@ -191,8 +191,8 @@ describe('GroceryListComponent', () => {
     const html = fixture.nativeElement;
     let items = html.querySelectorAll('mat-list-item');
     let itemsCount = items.length;
-    const addListButton = html.querySelector('.list-header span ~ button');
-    addListButton.click();
+    const addItemButton = html.querySelector('.header-button-last button');
+    addItemButton.click();
     fixture.detectChanges();
     const addItem = fixture.nativeElement.querySelector('input');
     addItem.value = '';
@@ -209,8 +209,8 @@ describe('GroceryListComponent', () => {
 
   it('should hide add item input if close is clicked', () => {
     const html = fixture.nativeElement;
-    const addListButton = html.querySelector('.list-header span ~ button');
-    addListButton.click();
+    const addItemButton = html.querySelector('.header-button-last button');
+    addItemButton.click();
     fixture.detectChanges();
     const closeButton = fixture.nativeElement.querySelector(
       'add-list-item button ~ button'
@@ -227,8 +227,8 @@ describe('GroceryListComponent', () => {
     const html = fixture.nativeElement;
     let items = html.querySelectorAll('mat-list-item');
     let itemsCount = items.length;
-    const addListButton = html.querySelector('.list-header span ~ button');
-    addListButton.click();
+    const addItemButton = html.querySelector('.header-button-last button');
+    addItemButton.click();
     fixture.detectChanges();
     const addItem = fixture.nativeElement.querySelector('input');
     addItem.value = 'new item';
@@ -280,7 +280,7 @@ describe('GroceryListComponent', () => {
   it('should navigate back to list of lists when back arrow is clicked', () => {
     const routerSpy = spyOn(component.router, 'navigate');
     const html = fixture.nativeElement;
-    const goBackButton = html.querySelector('.list-header button');
+    const goBackButton = html.querySelector('.header-button-first button');
     goBackButton.click();
 
     expect(routerSpy).toHaveBeenCalledWith(['/my-lists']);

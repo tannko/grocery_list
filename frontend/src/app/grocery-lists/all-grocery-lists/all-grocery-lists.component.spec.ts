@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { of } from 'rxjs';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { MatIconModule } from '@angular/material/icon';
 
 const mockLists = [
   {
@@ -77,7 +78,7 @@ describe('AllGroceryListsComponent', () => {
           },
         },
       ],
-      imports: [MatCardModule, MatListModule, AppRoutingModule],
+      imports: [MatCardModule, MatListModule, AppRoutingModule, MatIconModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AllGroceryListsComponent);
