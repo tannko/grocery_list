@@ -7,7 +7,4 @@ import { Component } from '@angular/core';
 })
 export class CreateNewListComponent {
   listName: string = '';
-  // saveNewList() {
-  //   console.log('save new list and redirect to list edit');
-  // }
 }

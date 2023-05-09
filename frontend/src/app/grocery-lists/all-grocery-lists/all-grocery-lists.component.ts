@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateNewListComponent } from '../create-new-list/create-new-list.component';
-import { Router } from '@angular/router';
 import { GroceryList } from '../grocery-list/grocery-list';
-import { Observable, map } from 'rxjs';
 import { GroceryListService } from '../grocery-list.service';
 
 @Component({
@@ -12,11 +10,7 @@ import { GroceryListService } from '../grocery-list.service';
   styleUrls: ['./all-grocery-lists.component.css'],
 })
 export class AllGroceryListsComponent implements OnInit {
-  constructor(
-    private router: Router,
-    private service: GroceryListService,
-    public dialog: MatDialog
-  ) {}
+  constructor(private service: GroceryListService, public dialog: MatDialog) {}
 
   groceryLists: Array<GroceryList> = [];
   showAddListInput: boolean = false;
@@ -25,10 +19,6 @@ export class AllGroceryListsComponent implements OnInit {
     this.service.getAllLists().subscribe((allLists: Array<GroceryList>) => {
       this.groceryLists = allLists;
     });
-  }
-
-  onListClick(id: number) {
-    console.log(id);
   }
 
   openAddListDialog() {

@@ -15,7 +15,7 @@ import { EditListItemComponent } from '../edit-list-item/edit-list-item.componen
 export class GroceryListComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
+    public router: Router,
     private service: GroceryListService,
     public dialog: MatDialog
   ) {}
@@ -63,7 +63,6 @@ export class GroceryListComponent implements OnInit {
     this.service
       .addListItem(this.groceryList.id, name)
       .subscribe((list: GroceryList) => {
-        console.log(list);
         this.groceryList = list;
       });
   }

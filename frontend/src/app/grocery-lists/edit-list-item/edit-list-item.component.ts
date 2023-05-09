@@ -1,6 +1,5 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Item } from '../grocery-list/list-item';
 
 @Component({
   selector: 'app-edit-list-item',
