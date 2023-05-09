@@ -1,4 +1,15 @@
 {
+  "name": "lets-go-shopping",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "",
+    "start": "cd backend && npm install && nest start",
+    "heroku-postbuild": "cd frontend && npm install && ng build"
+  },
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.5.1"
+  },
   "dependencies": {
     "@angular/cli": "^15.0.0",
     "@nestjs/cli": "^9.4.2"
