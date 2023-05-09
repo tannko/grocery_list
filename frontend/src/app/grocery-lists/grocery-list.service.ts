@@ -3,6 +3,7 @@ import { of, Observable } from 'rxjs';
 import { GroceryList } from './grocery-list/grocery-list';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Item } from './grocery-list/list-item';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,7 @@ import { Item } from './grocery-list/list-item';
 export class GroceryListService {
   constructor(private http: HttpClient) {}
   //groceryListsUrl: string = 'http://localhost:3000/grocery-lists';
-  groceryListsUrl: string = '/grocery-lists';
+  groceryListsUrl: string = environment.backendUrl + '/grocery-lists';
 
   getGroceryList(id: number | string) {
     return this.http.get<GroceryList>(this.groceryListsUrl + '/' + id);
