@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
 import { GroceryListsService } from './grocery-lists.service';
-import { GroceryList, Item } from '@prisma/client';
+import type { GroceryList, Item } from '@prisma/client';
 
 @Controller('grocery-lists')
 export class GroceryListsController {
